@@ -1,0 +1,181 @@
+/* THE FOLLOWING ARE COPIED FROM style.css that apply here as well*/
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  } */
+
+/* .container {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+  } */
+/* -----------------------NEW FOR PRODUCTS PAGE only -------------------------------*/
+.main{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    gap: 5em;
+    font-size: 1.1em;
+    /* margin-top:2em;
+    margin-bottom:2em; */
+}
+
+.main h2{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* -----PROMO Section----- */
+.promoContainer{
+    display:flex;
+    margin-top: 2em;
+}
+
+.legend{
+    background-color: #347b16;
+    color:white;
+    font-size: 3.2em;
+    font-weight: bold;
+    line-height: 2em;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .promoContainer{
+        flex-direction:column;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 991px) {
+    .legend{
+        text-align: center;
+        font-size: 2em;
+        line-height: 1em ;
+    }
+}
+/* -----PRODUCTS Section----- */
+.productsContainer{
+    display:flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 991px) {
+    .productsContainer{
+        flex-wrap: wrap;
+        flex-direction:column;
+        align-items: center;
+        gap: 5em;
+    }
+} 
+
+@media (max-width: 991px) {
+    .main h2{
+        font-size: 2em;      
+    }
+}    
+#productsTitle{
+    margin-top: 3em;
+
+}
+
+.package{
+    max-width:20em;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+
+}
+
+.productDescription{
+    padding-top: 1em;
+}
+
+.package button{
+    border-radius: 0.2rem;
+    background-color: #82ba6b;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin: 1em auto;
+    font-weight: bold;
+}
+
+.package button a{
+    text-decoration: none;
+    color:white;
+}
+
+.package button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #347b16;
+}
+
+.package img{
+    width:100%;
+    max-height: 22vh;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+
+/* -----FAQ Section----- */
+.faqContainer{
+background-color:#347b16;
+max-width: 80%;
+align-self:center;
+}
+
+.faqContainer h2{
+    color:white;
+    text-align: center;
+    padding: 0.5em 0;
+}
+/* Buttons that are used to open and close the accordion panel */
+.btnQuest {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 1.1em;;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+/* Background color added to the button when it's clicked on
+(.activeQuest class is added with JS), and when you move the mouse over it (hover) */
+.activeQuest, .btnQuest:hover {
+background-color:#82ba6b;
+color:white;
+}
+/*Added for +, - icons on the left*/
+.btnQuest::after {
+content: '\002B'; /* + sign */
+color: #347b16;
+font-weight: bold;
+float: right;
+margin-left: 5px;
+}
+
+.activeQuest::after {
+content: "\2212"; /* - sign */
+}
+  
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+padding: 0 1.2em;
+display: none;
+background-color: white;
+/* overflow: hidden; */
+}

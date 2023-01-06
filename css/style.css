@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+
+  flex-direction: column;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #82ba6b;
+}
+
+.nav {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+
+  margin-right: 2.5rem;
+  gap: 3rem;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header ul li a {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+header ul li a:hover {
+  color: black;
+}
+
+.current-page::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  background-color: #347b16;
+  width: calc(100% + 40px);
+  top: 0;
+  left: -20px;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #82ba6b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social ul {
+  align-items: center;
+}
+
+.social svg {
+  width: 40px;
+  color: #347b16;
+}
+
+.social a:hover svg {
+  color: white;
+}
+
+@media (max-width: 991px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 0px 42px 0px 42px;
+  }
+  header ul {
+    display: none;
+  }
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../images/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    z-index: 11;
+    align-self: center;
+  }
+  .toggle.active {
+    background: url(../images/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  header ul.navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #82ba6b;
+    z-index: 10;
+  }
+  header ul li a {
+    color: white;
+    font-size: 1.5em;
+
+    margin: 5px 0;
+  }
+  header ul li a:hover {
+    color: black;
+  }
+
+  .current-page::before {
+    display: none;
+  }
+}
